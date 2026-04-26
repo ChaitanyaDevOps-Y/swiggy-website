@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "name": "Biryani House",
+    "cuisine": "Indian",
+    "rating": 4.5,
+    "deliveryTime": 25,
+    "priceForTwo": 500,
+    "image": "https://images.unsplash.com/photo-1563379091339-03b21a4b20ab",
+    "offer": "50% OFF",
+    "distance": 2.5,
+    "menu": [
+      { "id": "101", "name": "Chicken Biryani", "price": 250, "category": "Biryani", "isVeg": false, "rating": 4.6, "image": "https://images.unsplash.com/photo-1563379091339-03b21a4b20ab", "description": "Authentic Hyderabadi chicken biryani with aromatic rice" },
+      { "id": "102", "name": "Mutton Biryani", "price": 350, "category": "Biryani", "isVeg": false, "rating": 4.7, "image": "https://images.unsplash.com/photo-1563379091339-03b21a4b20ab", "description": "Tender mutton pieces with fragrant basmati rice" },
+      { "id": "103", "name": "Veg Biryani", "price": 180, "category": "Biryani", "isVeg": true, "rating": 4.3, "image": "https://images.unsplash.com/photo-1563379091339-03b21a4b20ab", "description": "Flavorful vegetable biryani" },
+      { "id": "104", "name": "Chicken 65", "price": 220, "category": "Starters", "isVeg": false, "rating": 4.4, "image": "https://images.unsplash.com/photo-1563379091339-03b21a4b20ab", "description": "Spicy deep-fried chicken" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Pizza Paradise",
+    "cuisine": "Italian",
+    "rating": 4.3,
+    "deliveryTime": 30,
+    "priceForTwo": 600,
+    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591",
+    "offer": "Buy 1 Get 1 Free",
+    "distance": 3.2,
+    "menu": [
+      { "id": "201", "name": "Margherita Pizza", "price": 299, "category": "Pizza", "isVeg": true, "rating": 4.5, "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591", "description": "Classic cheese and tomato pizza" },
+      { "id": "202", "name": "Pepperoni Pizza", "price": 399, "category": "Pizza", "isVeg": false, "rating": 4.7, "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591", "description": "Loaded with pepperoni and cheese" },
+      { "id": "203", "name": "Garlic Bread", "price": 149, "category": "Sides", "isVeg": true, "rating": 4.3, "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591", "description": "Toasted bread with garlic butter" },
+      { "id": "204", "name": "Pasta Alfredo", "price": 249, "category": "Pasta", "isVeg": true, "rating": 4.4, "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591", "description": "Creamy Alfredo pasta" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Chinese Wok",
+    "cuisine": "Chinese",
+    "rating": 4.2,
+    "deliveryTime": 35,
+    "priceForTwo": 450,
+    "image": "https://images.unsplash.com/photo-1563379091339-03b21a4b20ab",
+    "offer": "20% OFF",
+    "distance": 1.8,
+    "menu": [
+      { "id": "301", "name": "Hakka Noodles", "price": 199, "category": "Noodles", "isVeg": true, "rating": 4.3, "image": "https://images.unsplash.com/photo-1563379091339-03b21a4b20ab", "description": "Stir-fried noodles with vegetables" },
+      { "id": "302", "name": "Chilli Chicken", "price": 249, "category": "Starters", "isVeg": false, "rating": 4.5, "image": "https://images.unsplash.com/photo-1563379091339-03b21a4b20ab", "description": "Spicy chicken in chilli sauce" },
+      { "id": "303", "name": "Manchow Soup", "price": 99, "category": "Soup", "isVeg": true, "rating": 4.2, "image": "https://images.unsplash.com/photo-1563379091339-03b21a4b20ab", "description": "Hot and spicy soup" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Burger King",
+    "cuisine": "American",
+    "rating": 4.1,
+    "deliveryTime": 20,
+    "priceForTwo": 400,
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+    "offer": "Free Delivery",
+    "distance": 2.0,
+    "menu": [
+      { "id": "401", "name": "Whopper Burger", "price": 299, "category": "Burgers", "isVeg": false, "rating": 4.6, "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd", "description": "Flame-grilled beef patty burger" },
+      { "id": "402", "name": "Veggie Burger", "price": 199, "category": "Burgers", "isVeg": true, "rating": 4.3, "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd", "description": "Crispy veg patty burger" },
+      { "id": "403", "name": "French Fries", "price": 99, "category": "Sides", "isVeg": true, "rating": 4.4, "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd", "description": "Crispy golden fries" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "South Indian Cafe",
+    "cuisine": "South Indian",
+    "rating": 4.6,
+    "deliveryTime": 25,
+    "priceForTwo": 300,
+    "image": "https://images.unsplash.com/photo-1589301760014-2d7d94e16573",
+    "offer": "30% OFF",
+    "distance": 1.5,
+    "menu": [
+      { "id": "501", "name": "Masala Dosa", "price": 120, "category": "Dosa", "isVeg": true, "rating": 4.7, "image": "https://images.unsplash.com/photo-1589301760014-2d7d94e16573", "description": "Crispy dosa with potato filling" },
+      { "id": "502", "name": "Idli Sambhar", "price": 80, "category": "South Indian", "isVeg": true, "rating": 4.5, "image": "https://images.unsplash.com/photo-1589301760014-2d7d94e16573", "description": "Soft idlis with sambhar and chutney" },
+      { "id": "503", "name": "Vada", "price": 60, "category": "Snacks", "isVeg": true, "rating": 4.4, "image": "https://images.unsplash.com/photo-1589301760014-2d7d94e16573", "description": "Crispy lentil donuts" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Sweet Treats",
+    "cuisine": "Desserts",
+    "rating": 4.4,
+    "deliveryTime": 20,
+    "priceForTwo": 250,
+    "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307",
+    "offer": "15% OFF",
+    "distance": 2.8,
+    "menu": [
+      { "id": "601", "name": "Chocolate Cake", "price": 150, "category": "Cakes", "isVeg": true, "rating": 4.6, "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307", "description": "Rich chocolate cake slice" },
+      { "id": "602", "name": "Ice Cream Sundae", "price": 120, "category": "Ice Cream", "isVeg": true, "rating": 4.5, "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307", "description": "Vanilla ice cream with toppings" },
+      { "id": "603", "name": "Gulab Jamun", "price": 80, "category": "Indian Sweets", "isVeg": true, "rating": 4.7, "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307", "description": "Soft milk dumplings in sugar syrup" }
+    ]
+  }
+]
