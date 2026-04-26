@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy - Order food online from best restaurants</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>Swiggy</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link" onclick="showHome()">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="#" class="nav-link" onclick="showCart()">
+                    <i class="fas fa-shopping-cart"></i> Cart
+                    <span id="cartCount" class="cart-badge">0</span>
+                </a>
+                <a href="#" class="nav-link" onclick="showOrders()">
+                    <i class="fas fa-list"></i> Orders
+                </a>
+                <a href="#" class="nav-link" id="authLink" onclick="toggleAuth()">
+                    <i class="fas fa-user"></i> Login
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Home Page -->
+        <div id="homePage" class="active-page">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Hungry? Order food from the best restaurants</h1>
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search for restaurants or cuisines..." onkeyup="searchRestaurants()">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Filters -->
+            <div class="filters">
+                <div class="container">
+                    <button class="filter-btn active" onclick="filterByCuisine('all')">All</button>
+                    <button class="filter-btn" onclick="filterByCuisine('Indian')">Indian</button>
+                    <button class="filter-btn" onclick="filterByCuisine('Chinese')">Chinese</button>
+                    <button class="filter-btn" onclick="filterByCuisine('Italian')">Italian</button>
+                    <button class="filter-btn" onclick="filterByCuisine('American')">American</button>
+                    <button class="filter-btn" onclick="filterByCuisine('South Indian')">South Indian</button>
+                    <button class="filter-btn" onclick="filterByCuisine('Desserts')">Desserts</button>
+                    <button class="filter-btn" onclick="sortRestaurants('rating')">Top Rated</button>
+                    <button class="filter-btn" onclick="sortRestaurants('price')">Price: Low to High</button>
+                </div>
+            </div>
+
+            <!-- Restaurants Grid -->
+            <div class="restaurants-section">
+                <div class="container">
+                    <h2 class="section-title">Restaurants near you</h2>
+                    <div class="restaurants-grid" id="restaurantsGrid"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Page -->
+        <div id="cartPage" class="hidden-page">
+            <div class="cart-container">
+                <div class="container">
+                    <h2>Your Cart</h2>
+                    <div id="cartItems" class="cart-items"></div>
+                    <div id="emptyCart" class="empty-cart">
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>Your cart is empty</p>
+                        <button onclick="showHome()" class="btn-primary">Order Now</button>
+                    </div>
+                    <div id="cartSummary" class="cart-summary hidden">
+                        <div class="summary-details">
+                            <h3>Bill Details</h3>
+                            <div class="summary-row">
+                                <span>Item Total</span>
+                                <span id="itemTotal">₹0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery Fee</span>
+                                <span id="deliveryFee">₹40</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax & Charges</span>
+                                <span id="taxAmount">₹0</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total Amount</span>
+                                <span id="totalAmount">₹0</span>
+                            </div>
+                        </div>
+                        <button onclick="proceedToCheckout()" class="checkout-btn">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orders Page -->
+        <div id="ordersPage" class="hidden-page">
+            <div class="orders-container">
+                <div class="container">
+                    <h2>Your Orders</h2>
+                    <div id="ordersList" class="orders-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Restaurant Details Modal -->
+        <div id="restaurantModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="modalBody"></div>
+            </div>
+        </div>
+
+        <!-- Checkout Modal -->
+        <div id="checkoutModal" class="modal">
+            <div class="modal-content checkout-modal">
+                <span class="close" onclick="closeCheckoutModal()">&times;</span>
+                <h2>Place Your Order</h2>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label>Delivery Address</label>
+                        <textarea required placeholder="Enter your full delivery address"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Payment Method</label>
+                        <select required>
+                            <option value="">Select payment method</option>
+                            <option value="card">Credit/Debit Card</option>
+                            <option value="upi">UPI</option>
+                            <option value="cod">Cash on Delivery</option>
+                            <option value="wallet">Swiggy Wallet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" required placeholder="Enter your phone number">
+                    </div>
+                    <button type="submit" class="place-order-btn">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
