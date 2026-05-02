@@ -1,0 +1,9 @@
+FROM node:22-alpine as parent      #using alpine images , using multistage docker file and can also use .dockerignore
+COPY package*.json .
+RUN npm install
+COPY . .
+
+FROM parent as child
+RUN npm install --production
+COPY . .
+CMD ["node","server.js"]
